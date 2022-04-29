@@ -30,7 +30,7 @@ export default function Header() {
           <Logo src="./images/logo.svg" alt="header-logo" />
           {isMobile && (!displayMenu ? (
             <>
-              <a href="#" class="burger-menu" onClick={handleToggle}>
+              <a href="https://github.com/Chanda-Abdul/react-dropdown-navigation-frontend-mentor" class="burger-menu" onClick={handleToggle}>
                 <img src="./images/icon-menu.svg" alt="menu" />
               </a>
             </>

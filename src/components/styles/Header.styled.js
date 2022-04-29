@@ -25,9 +25,6 @@ export const Nav = styled.nav`
   margin: 0;
   padding: 0.75em;
 
-    /* a >img {
-        height: 1.5em; 
-    } */
   }
   
  

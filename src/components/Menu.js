@@ -27,7 +27,7 @@ export default function Menu({ setDisplayMenu, displayMenu }) {
               <ul>
                 <li>
                   <a
-                    href="#"
+                    href="https://github.com/Chanda-Abdul/react-dropdown-navigation-frontend-mentor"
                     class="burger-menu-close"
                     onClick={handleToggle}
                     className="close"
@@ -36,17 +36,19 @@ export default function Menu({ setDisplayMenu, displayMenu }) {
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="level-one">
+                  <a href="https://github.com/Chanda-Abdul/react-dropdown-navigation-frontend-mentor" className="level-one">
                     Features{" "}
                     {!displayFeatures ? (
                       <img
                         src="./images/icon-arrow-down.svg"
                         onClick={handleDisplayFeatures}
+                        alt="down-arrow"
                       />
                     ) : (
                       <img
                         src="./images/icon-arrow-up.svg"
                         onClick={handleDisplayFeatures}
+                        alt="up-arrow"
                       />
                     )}
                   </a>
@@ -56,37 +58,39 @@ export default function Menu({ setDisplayMenu, displayMenu }) {
                   <>
                     <ul className="features-list">
                       <li className="level-two">
-                        <img src="./images/icon-todo.svg" />
-                        <a href="#">Todo List</a>
+                        <img src="./images/icon-todo.svg" alt="to-do"/>
+                        <a href="https://github.com/Chanda-Abdul/react-dropdown-navigation-frontend-mentor">Todo List</a>
                       </li>
                       <li className="level-two">
-                        <img src="./images/icon-calendar.svg" />
-                        <a href="#">Calendar</a>
+                        <img src="./images/icon-calendar.svg" alt="calendar"/>
+                        <a href="https://github.com/Chanda-Abdul/react-dropdown-navigation-frontend-mentor">Calendar</a>
                       </li>
                       <li className="level-two">
-                        <img src="./images/icon-reminders.svg" />
-                        <a href="#">Reminders</a>
+                        <img src="./images/icon-reminders.svg" alt="reminders"/>
+                        <a href="https://github.com/Chanda-Abdul/react-dropdown-navigation-frontend-mentor">Reminders</a>
                       </li>
                       <li className="level-two">
-                        <img src="./images/icon-planning.svg" />
-                        <a href="#">Planning</a>
+                        <img src="./images/icon-planning.svg" alt="planning"/>
+                        <a href="https://github.com/Chanda-Abdul/react-dropdown-navigation-frontend-mentor">Planning</a>
                       </li>
                     </ul>
                   </>
                 )}
 
                 <li>
-                  <a href="#" className="level-one">
+                  <a href="https://github.com/Chanda-Abdul/react-dropdown-navigation-frontend-mentor" className="level-one">
                     Company{" "}
                     {!displayCompany ? (
                       <img
                         src="./images/icon-arrow-down.svg"
                         onClick={handleDisplayCompany}
+                        alt="down-arrow"
                       />
                     ) : (
                       <img
                         src="./images/icon-arrow-up.svg"
                         onClick={handleDisplayCompany}
+                        alt="up-arrow"
                       />
                     )}
                   </a>
@@ -97,33 +101,33 @@ export default function Menu({ setDisplayMenu, displayMenu }) {
                     {" "}
                     <ul className="company-list">
                       <li className="level-two">
-                        <a href="#">History</a>
+                        <a href="https://github.com/Chanda-Abdul/react-dropdown-navigation-frontend-mentor">History</a>
                       </li>
                       <li className="level-two">
-                        <a href="#">Our Team</a>
+                        <a href="https://github.com/Chanda-Abdul/react-dropdown-navigation-frontend-mentor">Our Team</a>
                       </li>
                       <li className="level-two">
-                        <a href="#">Blog</a>
+                        <a href="https://github.com/Chanda-Abdul/react-dropdown-navigation-frontend-mentor">Blog</a>
                       </li>
                     </ul>
                   </>
                 )}
 
                 <li>
-                  <a href="#" className="level-one">
+                  <a href="https://github.com/Chanda-Abdul/react-dropdown-navigation-frontend-mentor" className="level-one">
                     Careers
                   </a>
                 </li>
 
                 <li>
-                  <a href="#" className="level-one">
+                  <a href="https://github.com/Chanda-Abdul/react-dropdown-navigation-frontend-mentor" className="level-one">
                     About
                   </a>
                 </li>
                 {/* TODO? => display Login/Register at desktop breakpoint*/}
               </ul>
               <div className="cta">
-                <a href="#">Login</a>
+                <a href="https://github.com/Chanda-Abdul/react-dropdown-navigation-frontend-mentor">Login</a>
                 <button>Register</button>
               </div>
             </div>
