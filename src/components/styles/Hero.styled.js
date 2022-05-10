@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const StyledHero = styled.div`
   display: flex;
@@ -6,12 +6,10 @@ export const StyledHero = styled.div`
   justify-content: center;
   align-items: center;
   max-width: 100%;
-  
   text-align: center;
 
-  .hero-image{
-      width: 100vw;
-     
+  .hero-image {
+    width: 100vw;
   }
 
   h1 {
@@ -52,73 +50,33 @@ export const StyledHero = styled.div`
   }
 
   @media (min-width: ${({ theme }) => theme.tablet}) {
-    /* h1 {
-    padding: 50px 10px 10px 10px;
-    font-size: 4em;
-    
-  } */
-
-  }
-
-
-  /* 
+    display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    margin: 50px 0;
-    .hero-text {
-      display: flex;
-      flex-direction: column;
-      width: 50%;
-      align-items: left;
-      padding: 50px 0;
+    justify-content: space-between;
+    /* align-items: center; */
+    /* margin: 50px 0; */
+    /* width: 100%; */
+    padding: 10px;
+
+    .hero-image {
+      display: inline-flex;
+      width: 30%;
     }
+    .hero-text {
+      display: inline-flex;
+      flex-direction: column;
+      width: 30%;
+      /* align-items: left; */
+      /* padding: 50px 0; */
+    }
+
     h1 {
-      width: 90%;
       padding: 50px 0 0 0;
       font-size: 1.5rem;
       line-height: 2rem;
       margin: 0;
       text-align: left;
-      /* color: ${({ color }) => color || "var(--very-dark-cyan)"}; */
-  /* } */
-  /* p {
-      width: 90%;
-      padding: 10px 0 30px 0;
-      font-size: 0.85rem;
-      margin: 10px 0;
-      text-align: left;
-    } 
-  } */
-  /* @media (min-width: ${({ theme }) => theme.desktop}) {
-    flex-direction: row;
-    justify-content: space-around;
-    margin: 25px 75px;
-    .hero-text {
-      width: 50%;
+      color: ${({ color }) => color || 'var(--very-dark-cyan)'};
     }
-    h1 {
-      min-width: 20%;
-      font-size: 2.5rem;
-      line-height: 2.5rem;
-    }
-    p {
-      max-width: 75%;
-      font-size: 1.5rem;
-    }
-  } */
-  img {
-    @media (min-width: ${({ theme }) => theme.mobile}) {
-      /* width: 100vw; */
-      /* margin: 0; */
-    }
-    /* @media (min-width: ${({ theme }) => theme.tablet}) {
-      width: 60%;
-      padding: 10px;
-    } */
-    /* @media (min-width: ${({ theme }) => theme.desktop}) {
-      width: 50%;
-      padding: 25px;
-    } */
   }
 `;

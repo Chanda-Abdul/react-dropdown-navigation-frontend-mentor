@@ -35,6 +35,7 @@ Users should be able to:
 ![](./design/desktop-design.jpg)
 ### Mobile
 ![](./design/mobile-design.jpg)
+
 ![](./design/mobile-menu-collapsed.jpg)
 ![](./design/mobile-menu-expanded.jpg)
 ### Active States
@@ -97,8 +98,6 @@ const proudOfThisFunc = () => {
 - Website - [Chanda Codes](https://chandacodes.com/)
 - GitHub - [github.com/Chanda-Abdul](https://github.com/Chanda-Abdul)
 
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
 
 ## Acknowledgments
 

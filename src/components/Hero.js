@@ -24,7 +24,8 @@ export default function Header() {
   return (
     <>
       <StyledHero>
-        <div className="container">
+        <div className="desktop-container">
+         
           <img src={`${heroImage}`} className="hero-image" alt="hero" />
 
           <div className="hero-text">

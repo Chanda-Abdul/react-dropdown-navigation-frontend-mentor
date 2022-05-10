@@ -3,15 +3,15 @@ import styled from "styled-components";
 export const StyledHeader = styled.header`
   margin: 0 ; 
   display: flex; 
-  width: 100vw; 
+  /* width: 100vw;  */
 `;
 
 export const Nav = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100vw;
-  height: 3em;
+  /* width: 100vw; */
+  /* height: 3em; */
   margin: 0;
   padding: 0.75em;
   flex-direction: row;
@@ -19,9 +19,11 @@ export const Nav = styled.nav`
 
   @media (min-width: ${({ theme }) => theme.tablet}) {
     flex-direction: row;
+    align-items: center;
+  justify-content: space-between;
     width: 100vw;
     margin: 10px;
-    height: auto;
+    /* height: auto; */
   margin: 0;
   padding: 0.75em;
 

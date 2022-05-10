@@ -1,13 +1,11 @@
 import React, { useState } from "react";
-import { StyledMenu } from "./styles/Menu.styled";
+import { StyledDesktopMenu } from "./styles/DesktopMenuBar.styled";
 
 export default function Menu({ setDisplayMenu, displayMenu }) {
   const [displayFeatures, setDisplayFeatures] = useState(false);
   const [displayCompany, setDisplayCompany] = useState(false);
 
-  const handleToggle = () => {
-    setDisplayMenu(!displayMenu);
-  };
+  
   const handleDisplayFeatures = () => {
     setDisplayFeatures(!displayFeatures);
   };
@@ -17,26 +15,15 @@ export default function Menu({ setDisplayMenu, displayMenu }) {
 
   return (
     <>
-      <StyledMenu>
-        {/* TODO => display hamburger at mobile breakpoint  || menu close*/}
-        {/* TODO => overlay/opacity when menu is open*/}
-
+      <StyledDesktopMenu>
+        
         <div class="container">
-          <div class="dropdown-menu">
+          <div class="menu-bar">
             <div className="content">
               <ul>
+                
                 <li>
-                  <a
-                    href="https://github.com/Chanda-Abdul/react-dropdown-navigation-frontend-mentor"
-                    class="burger-menu-close"
-                    onClick={handleToggle}
-                    className="close"
-                  >
-                    <img src="./images/icon-close-menu.svg" alt="close-menu" />
-                  </a>
-                </li>
-                <li>
-                  <a href="https://github.com/Chanda-Abdul/react-dropdown-navigation-frontend-mentor" className="level-one">
+                  <a href="#features" className="level-one">
                     Features{" "}
                     {!displayFeatures ? (
                       <img
@@ -133,7 +120,7 @@ export default function Menu({ setDisplayMenu, displayMenu }) {
             </div>
           </div>
         </div>
-      </StyledMenu>
+      </StyledDesktopMenu>
     </>
   );
 }

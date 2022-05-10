@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
-import { StyledHeader, Nav, Logo } from "./styles/Header.styled";
-import Menu from "./Menu";
+import React, { useState, useEffect } from 'react';
+import { StyledHeader, Nav, Logo } from './styles/Header.styled';
+import MobileDropDownMenu from './MobileDropDownMenu';
+import DesktopMenuBar from './DesktopMenuBar';
 
 export default function Header() {
-  const [displayMenu, setDisplayMenu] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [isMobile, setIsMobile] = useState(windowWidth >= 650 ? false : true);
 
@@ -13,37 +13,20 @@ export default function Header() {
       setIsMobile(windowWidth >= 650 ? false : true);
     };
 
-    window.addEventListener("resize", handleWindowResize);
+    window.addEventListener('resize', handleWindowResize);
 
     return () => {
-      window.removeEventListener("resize", handleWindowResize);
+      window.removeEventListener('resize', handleWindowResize);
     };
   }, [windowWidth]);
 
-  const handleToggle = () => {
-    setDisplayMenu(!displayMenu);
-  };
   return (
     <>
       <StyledHeader>
         <Nav>
-          <Logo src="./images/logo.svg" alt="header-logo" />
-          {isMobile && (!displayMenu ? (
-            <>
-              <a href="https://github.com/Chanda-Abdul/react-dropdown-navigation-frontend-mentor" class="burger-menu" onClick={handleToggle}>
-                <img src="./images/icon-menu.svg" alt="menu" />
-              </a>
-            </>
-          ) : (
-            <Menu setDisplayMenu={setDisplayMenu} displayMenu={displayMenu} />
-          ))}
+          <Logo src='./images/logo.svg' alt='header-logo' />
 
-          {!isMobile && (
-            <>
-              <Menu />
-              
-            </>
-          )}
+          {isMobile ? <MobileDropDownMenu /> : <DesktopMenuBar />}
         </Nav>
       </StyledHeader>
     </>
