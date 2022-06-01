@@ -31,23 +31,19 @@ Users should be able to:
 ## Screenshots
 
 ### Desktop
-<!-- <img src="./design/desktop-preview.jpg" alt="" width="500"/> -->
-<img src="./design/desktop-design.jpg" alt="" width="500"/>
+
+<img src="./design/desktop-design.jpg" alt="" width="600"/>
 
 ### Mobile
 <img src="./design/mobile-design.jpg" alt="" width="350"/>
 
-#### Dropdown Menu - Collapsed
+#### Dropdown Menu - Collapsed  Dropdown Menu - Expanded
 <img src="./design/mobile-menu-collapsed.jpg" alt="" width="350"/> <img src="./design/mobile-menu-expanded.jpg" alt="" width="350"/>
 
-#### Dropdown Menu - Expanded
 
 
 ### Active States
-<img src="./design/active-states.jpg" alt="" width="500"/>
-
-
-
+<img src="./design/active-states.jpg" alt="" width="600"/>
 
 ## Links
 
@@ -60,8 +56,8 @@ Users should be able to:
 
 
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Styled Components](https://styled-components.com/) - For styles
+- [React](https://reactjs.org/) - JavaScript Framework
+- [React Styled Components](https://styled-components.com/) - For <b>CSS</b> Styling
 
 
 ### What I learned
@@ -88,7 +84,7 @@ const proudOfThisFunc = () => {
 ### Continued development
 
 - animations
-- `href` navigation
+- hero image aspect ratio
 - `aria` attributes and accessiblility
 
 ### Useful resources

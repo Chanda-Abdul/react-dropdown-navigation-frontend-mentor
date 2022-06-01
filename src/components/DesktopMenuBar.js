@@ -43,22 +43,22 @@ export default function Menu() {
                   </li>
                   <li className='level-two'>
                     <img src='./images/icon-calendar.svg' alt='calendar' />
-                    <a href='#'>Calendar</a>
+                    <a href="/#">Calendar</a>
                   </li>
                   <li className='level-two'>
                     <img src='./images/icon-reminders.svg' alt='reminders' />
-                    <a href='#'>Reminders</a>
+                    <a href="/#">Reminders</a>
                   </li>
                   <li className='level-two'>
                     <img src='./images/icon-planning.svg' alt='planning' />
-                    <a href='#'>Planning</a>
+                    <a href="/#">Planning</a>
                   </li>
                 </ul>
               </>
             )}
 
             <li>
-              <a href='#' className='level-one' onClick={handleDisplayCompany}>
+              <a href="/#" className='level-one' onClick={handleDisplayCompany}>
                 Company{' '}
                 {!displayCompany ? (
                   <img src='./images/icon-arrow-down.svg' alt='down-arrow' />
@@ -73,32 +73,32 @@ export default function Menu() {
                 {' '}
                 <ul className='company-list'>
                   <li className='level-two'>
-                    <a href='#'>History</a>
+                    <a href="/#">History</a>
                   </li>
                   <li className='level-two'>
-                    <a href='#'>Our Team</a>
+                    <a href="/#">Our Team</a>
                   </li>
                   <li className='level-two'>
-                    <a href='#'>Blog</a>
+                    <a href="/#">Blog</a>
                   </li>
                 </ul>
               </>
             )}
 
             <li>
-              <a href='#' className='level-one'>
+              <a href="/#" className='level-one'>
                 Careers
               </a>
             </li>
 
             <li>
-              <a href='#' className='level-one'>
+              <a href="/#" className='level-one'>
                 About
               </a>
             </li>
           </ul>
           <section className='cta'>
-            <a href='#'>Login</a>
+            <a href="/#">Login</a>
             <button>Register</button>
           </section>
         </div>

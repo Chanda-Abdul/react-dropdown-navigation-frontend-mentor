@@ -28,7 +28,7 @@ export default function Menu() {
             <img
               src='./images/icon-menu.svg'
               alt='menu'
-              class='burger-menu'
+              className='burger-menu'
               onClick={handleToggle}
             />
           </>
@@ -37,7 +37,7 @@ export default function Menu() {
         {displayMenu && (
           <>
             <div className='container'></div>
-            <div class='dropdown-menu'>
+            <div className='dropdown-menu'>
               <div className='content'>
                 <ul>
                   <li className='close-menu'>
@@ -49,7 +49,7 @@ export default function Menu() {
                   </li>
                   <li>
                     <a
-                      href='#features'
+                      href='/#'
                       className='level-one'
                       onClick={handleDisplayFeatures}
                     >
@@ -70,28 +70,28 @@ export default function Menu() {
                       <ul className='features-list'>
                         <li className='level-two'>
                           <img src='./images/icon-todo.svg' alt='to-do' />
-                          <a href='#todolist'>Todo List</a>
+                          <a href='/#'>Todo List</a>
                         </li>
                         <li className='level-two'>
                           <img
                             src='./images/icon-calendar.svg'
                             alt='calendar'
                           />
-                          <a href='#calendar'>Calendar</a>
+                          <a href='/#'>Calendar</a>
                         </li>
                         <li className='level-two'>
                           <img
                             src='./images/icon-reminders.svg'
                             alt='reminders'
                           />
-                          <a href='#reminders'>Reminders</a>
+                          <a href='/#'>Reminders</a>
                         </li>
                         <li className='level-two'>
                           <img
                             src='./images/icon-planning.svg'
                             alt='planning'
                           />
-                          <a href='#planning'>Planning</a>
+                          <a href='/#'>Planning</a>
                         </li>
                       </ul>
                     </>
@@ -99,7 +99,7 @@ export default function Menu() {
 
                   <li>
                     <a
-                      href='#company'
+                      href='/#'
                       className='level-one'
                       onClick={handleDisplayCompany}
                     >
@@ -120,32 +120,32 @@ export default function Menu() {
                       {' '}
                       <ul className='company-list'>
                         <li className='level-two'>
-                          <a href='#history'>History</a>
+                          <a href='/#'>History</a>
                         </li>
                         <li className='level-two'>
-                          <a href='#team'>Our Team</a>
+                          <a href='/#'>Our Team</a>
                         </li>
                         <li className='level-two'>
-                          <a href='#blog'>Blog</a>
+                          <a href='/#'>Blog</a>
                         </li>
                       </ul>
                     </>
                   )}
 
                   <li>
-                    <a href='#careers' className='level-one'>
+                    <a href='/#' className='level-one'>
                       Careers
                     </a>
                   </li>
 
                   <li>
-                    <a href='#about' className='level-one'>
+                    <a href='/#' className='level-one'>
                       About
                     </a>
                   </li>
                 </ul>
                 <div className='cta'>
-                  <a href='#login'>Login</a>
+                  <a href='/#'>Login</a>
                   <button>Register</button>
                 </div>
               </div>

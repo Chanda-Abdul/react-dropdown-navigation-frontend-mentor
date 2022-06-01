@@ -5,8 +5,8 @@ export default function Footer() {
     <>
       <StyledFooter>
         <footer>
-          <p>
-            <div class='attribution'>
+        
+            <div className='attribution'>
               Challenge by
               <a
                 href='https://www.frontendmentor.io/challenges/intro-section-with-dropdown-navigation-ryaPetHE5'
@@ -18,7 +18,7 @@ export default function Footer() {
               </a>
               . Coded by <a href='ChandaCodes.com'> Chanda Abdul</a>.
             </div>
-          </p>
+  
         </footer>
       </StyledFooter>
     </>
