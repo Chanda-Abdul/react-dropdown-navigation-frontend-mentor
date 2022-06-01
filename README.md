@@ -31,17 +31,20 @@ Users should be able to:
 ## Screenshots
 
 ### Desktop
-<img src="./design/desktop-preview.jpg" alt="" width="300"/>
-<img src="./design/desktop-design.jpg" alt="" width="300"/>
+<!-- <img src="./design/desktop-preview.jpg" alt="" width="500"/> -->
+<img src="./design/desktop-design.jpg" alt="" width="500"/>
 
 ### Mobile
-<img src="./design/mobile-design.jpg" alt="" width="300"/>
+<img src="./design/mobile-design.jpg" alt="" width="350"/>
 
-<img src="./design/mobile-menu-collapsed.jpg" alt="" width="300"/>
-<img src="./design/mobile-menu-expanded.jpg" alt="" width="300"/>
+#### Dropdown Menu - Collapsed
+<img src="./design/mobile-menu-collapsed.jpg" alt="" width="350"/> <img src="./design/mobile-menu-expanded.jpg" alt="" width="350"/>
+
+#### Dropdown Menu - Expanded
+
 
 ### Active States
-<img src="./design/active-states.jpg" alt="" width="300"/>
+<img src="./design/active-states.jpg" alt="" width="500"/>
 
 
 
