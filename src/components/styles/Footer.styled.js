@@ -1,35 +1,24 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const StyledFooter = styled.footer`
   display: flex;
+  flex-direction: column;
   width: 100vw;
   align-items: center;
-  justify-content: space-between;
-  flex-direction: row;
-  margin: 30px 10px 20px 10px;
- 
-  .client-list {
-    padding: 30px 10px 60px 10px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    img{
-      width: 15vw;
-    }
-  }
+  margin: 50px auto 0 auto;
 
-   .attribution {
+  .attribution {
     position: static;
     display: flex;
     text-align: center;
+    justify-content: center;
     font-size: 0.75em;
     font-weight: 200;
     line-height: 0.25em;
 
-    a{
+    a {
       color: var(--cornflower-blue);
-      margin: 1.2px;
-
+      padding: 0 0 0 5px;
     }
-}  
+  }
 `;

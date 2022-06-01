@@ -23,11 +23,10 @@ export default function Header() {
   return (
     <>
       <StyledHeader>
-        <Nav>
+        <div className='navigation'>
           <Logo src='./images/logo.svg' alt='header-logo' />
-
-          {isMobile ? <MobileDropDownMenu /> : <DesktopMenuBar />}
-        </Nav>
+          <Nav>{isMobile ? <MobileDropDownMenu /> : <DesktopMenuBar />}</Nav>
+        </div>
       </StyledHeader>
     </>
   );

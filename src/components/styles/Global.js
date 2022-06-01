@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyles = createGlobalStyle`
 
@@ -12,26 +12,34 @@ h6 {
     font-weight: 700;
   
 }
+
+img {
+  max-width: 100%;
+} 
+
+
 body {
     font-family: 'Epilogue', sans-serif;
     font-weight: 500;
     background: var(--almost-white);
     transition: 1s ease-in-out;
  }
+ 
  p {
    line-height: 1.5;
-   font-size: 18px;
    color: var(--almost-black);
   }
-  @media (min-width: ${({ theme }) => theme.desktop}) {
-    font-size: 1.25em;
-  }
-  @media (min-width: ${({ theme }) => theme.desktop}) {
+ 
+  @media (min-width: ${({ theme }) => theme.tablet}) {
     font-size: 1.25em;
   }
 
+  @media (min-width: ${({ theme }) => theme.desktop}) {
+    font-size: 1.5em;
+  }
+  
   .container {
-    max-width: 100%;
+  max-width: 100%;
   padding: 0 10px 10px 10px;
   margin: 10px;
   

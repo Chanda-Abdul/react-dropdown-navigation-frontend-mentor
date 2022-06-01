@@ -4,9 +4,26 @@ export const StyledMobileMenu = styled.div`
   display: flex;
   position: relative;
   justify-content: flex-end;
+  align-items: center;
   margin: 0;
   padding: 0;
   font-weight: 400;
+
+  .burger-menu{
+    max-height: 10vw;
+  }
+
+  .container::before {
+      content: "";
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      z-index: 2;
+      background-color: rgba(0,0,0,0.8);
+  }
 
   .dropdown-menu {
     position: absolute;
@@ -18,13 +35,14 @@ export const StyledMobileMenu = styled.div`
     padding: 20px 10px 10px 30px;
     background-color: var(--almost-white);
     color: var(--medium-gray);
-    width: 60vw;
+    min-width: 250px;
     height: 100vh;
-    z-index: 2;
+    z-index: 3;
     box-shadow: 0px 0px 160px 0px var(--medium-gray);
-    top: -20px;
-    right: -10px;
+    top: -25px;
+    right: -15px;
     transition: 0.5s;
+  
   }
 
   img,

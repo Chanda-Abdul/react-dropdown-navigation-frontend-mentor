@@ -3,42 +3,98 @@ import styled from 'styled-components';
 export const StyledDesktopMenu = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  /* width: 100%; */
-  margin: 0;
-  padding: 0;
-  font-weight: 400;
+  width: 90vw;
 
-  .menu-bar {
-    /* width: 100%; */
-    position: relative;
+  .content {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .menu-links {
+    color: var(--medium-gray);
+    display: flex;
+    flex-direction: row;
+    margin: 5px;
+    padding: 5px;
+  }
+
+  .level-one {
+    position: relative;
+    margin: 10px 0;
+    line-height: 2.5em;
+    padding: 5px;
+    img {
+      padding: 0 5px;
+    }
+  }
+
+  .level-two {
+
+    height: fit-content;
+    margin: 5px 20px;
+    font-size: 1em;
+    line-height: 1.75em;
+    img {
+      padding-right: 15px;
+    }
+    ul > li {
+    }
+  }
+  ul {
+    .li {
+    }
+    .features-list {
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      position: absolute;
+      top: 50px;
+      padding: 20px 5px;
+      margin: 20px -70px;
+      border-radius: 10px;
+      background-color: var(--almost-white);
+      color: var(--medium-gray);
+      min-height: 200px;
+      box-shadow: 0px 0px 16px 0px var(--medium-gray);
+      transition: 0.5s;
+    }
+    .company-list {
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      position: absolute;
+      top: 50px;
+      padding: 20px 5px;
+      margin: 20px 90px;
+      border-radius: 10px;
+      background-color: var(--almost-white);
+      min-height: 150px;
+      box-shadow: 0px 0px 16px 0px var(--medium-gray);
+      transition: 0.5s;
+    }
   }
 
   a {
-    color: var(--almost-black);
+    color: var(--medium-gray);
   }
 
   .cta {
-    margin-top: 20px;
+    margin-left: 40px;
     display: flex;
-    flex-direction: row;
+
     align-items: center;
-    padding: 0;
-    flex-direction: flex-end;
 
     button {
-      margin: 20px 5px 10px 5px;
-      border: 2px solid var(--almost-black);
+      margin: 0 15px;
+      border: 2px solid var(--medium-gray);
       outline: none;
       background-color: var(--almost-white);
-      color: var(--almost-black);
+      color: var(--medium-gray);
       padding: 10px;
       border-radius: 15px;
       font-size: 15px;
-      width: 90%;
     }
 
     button:hover {
@@ -50,62 +106,4 @@ export const StyledDesktopMenu = styled.div`
       transform: scale(0.95);
     }
   }
-
-  .level-one {
-
-    margin: 30px 0;
-    line-height: 2.5em;
-    img {
-      padding: 0 10px;
-    }
-  }
-
-  .level-two {
-    /* position: absolute; */
-    top: 0;
-    right: 0;
-    height: fit-content;
-    margin: 5px 20px;
-    font-size: 1em;
-    line-height: 1.75em;
-    img {
-      padding-right: 15px;
-    }
-    ul > li {
-      padding: 25px;
-    }
-  }
-
-  /* &:hover {
-    opacity: 0.5;
-    
-    background-color: var(--pink);
-    color: var(--very-pale-cyan);
-  } */
-
-  .content {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  ul {
-    /* width: 100%; */
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    .features-list,
-    .company-list {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-  }
-  /* .cta {
-    margin-top: 20px; 
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 0;
-    flex-direction: flex-end;
-  } */
 `;

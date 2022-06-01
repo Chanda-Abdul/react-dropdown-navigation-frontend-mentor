@@ -24,22 +24,24 @@ Your challenge is to build out this intro section with dropdown navigation and g
 
 Users should be able to:
 
-- [ ] View the relevant dropdown menus on desktop and mobile when interacting with the navigation links
-- [ ] View the optimal layout for the content depending on their device's screen size
-- [ ] See hover states for all interactive elements on the page
+- [x] View the relevant dropdown menus on desktop and mobile when interacting with the navigation links
+- [x] View the optimal layout for the content depending on their device's screen size
+- [x] See hover states for all interactive elements on the page
 
 ## Screenshots
 
 ### Desktop
-![](./design/desktop-preview.jpg)
-![](./design/desktop-design.jpg)
-### Mobile
-![](./design/mobile-design.jpg)
+<img src="./design/desktop-preview.jpg" alt="" width="300"/>
+<img src="./design/desktop-design.jpg" alt="" width="300"/>
 
-![](./design/mobile-menu-collapsed.jpg)
-![](./design/mobile-menu-expanded.jpg)
+### Mobile
+<img src="./design/mobile-design.jpg" alt="" width="300"/>
+
+<img src="./design/mobile-menu-collapsed.jpg" alt="" width="300"/>
+<img src="./design/mobile-menu-expanded.jpg" alt="" width="300"/>
+
 ### Active States
-![](./design/active-states.jpg)
+<img src="./design/active-states.jpg" alt="" width="300"/>
 
 
 
@@ -82,15 +84,14 @@ const proudOfThisFunc = () => {
 
 ### Continued development
 
-- I plan to build this project using <b>Angular</b>
 - animations
+- `href` navigation
+- `aria` attributes and accessiblility
 
 ### Useful resources
 
-- [Responsive Background Images Using React Hooks🍍](https://itnext.io/responsive-background-images-using-react-hooks-941af365ea1f) - This helped me responsively render images based on the current device breakpoint.
-<!-- - [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept. -->
-
-
+- [Responsive Background Images Using React Hooks🍍](https://itnext.io/responsive-background-images-using-react-hooks-941af365ea1f) => This helped me responsively render images based on the current device breakpoint.
+- [CSS Overlay Techniques](https://tympanus.net/codrops/2013/11/07/css-overlay-techniques/) => to add overlay to all other content while the mobile dropdown menu is open
 
 ## Author
 
@@ -101,7 +102,4 @@ const proudOfThisFunc = () => {
 
 ## Acknowledgments
 
-<!-- This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.** -->
 
