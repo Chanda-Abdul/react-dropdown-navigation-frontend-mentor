@@ -4,7 +4,7 @@ import { StyledHero } from './styles/Hero.styled';
 export default function Header() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const heroImage =
-    windowWidth >= 650
+    windowWidth >= 768
       ? './images/image-hero-desktop.png'
       : './images/image-hero-mobile.png';
 
@@ -39,16 +39,32 @@ export default function Header() {
             <div className='client-list'>
               <ul className='clients'>
                 <li>
-                  <img src='./images/client-databiz.svg' alt='databiz' />
+                  <img
+                    src='./images/client-databiz.svg'
+                    alt='databiz'
+                    className='client'
+                  />
                 </li>
                 <li>
-                  <img src='./images/client-audiophile.svg' alt='audiophile' />
+                  <img
+                    src='./images/client-audiophile.svg'
+                    alt='audiophile'
+                    className='client'
+                  />
                 </li>
                 <li>
-                  <img src='./images/client-meet.svg' alt='meet' />
+                  <img
+                    src='./images/client-meet.svg'
+                    alt='meet'
+                    className='client'
+                  />
                 </li>
                 <li>
-                  <img src='./images/client-maker.svg' alt='maker' />
+                  <img
+                    src='./images/client-maker.svg'
+                    alt='maker'
+                    className='client'
+                  />
                 </li>
               </ul>
             </div>

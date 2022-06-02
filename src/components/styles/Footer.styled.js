@@ -19,6 +19,8 @@ export const StyledFooter = styled.footer`
     a {
       color: var(--cornflower-blue);
       padding: 0 0 0 5px;
+      text-shadow: .1px .1px var(--almost-black);
+
     }
   }
 `;

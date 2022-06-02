@@ -21,14 +21,30 @@ img {
 body {
     font-family: 'Epilogue', sans-serif;
     font-weight: 500;
-    background: var(--almost-white);
-    transition: 1s ease-in-out;
+    background: var(--almost-white);  
  }
  
  p {
    line-height: 1.5;
    color: var(--almost-black);
   }
+
+  .container {
+  max-width: 100%;
+  padding: 0 10px 10px 10px;
+  margin: 10px;
+}
+  a {
+  text-decoration: none;
+  color:var(--almost-black);
+ 
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
  
   @media (min-width: ${({ theme }) => theme.tablet}) {
     font-size: 1.25em;
@@ -38,10 +54,7 @@ body {
     font-size: 1.5em;
   }
   
-  .container {
-  max-width: 100%;
-  padding: 0 10px 10px 10px;
-  margin: 10px;
+  
   
   @media (min-width: ${({ theme }) => theme.tablet}) {
     padding: 0 10px 0 10px;
@@ -52,18 +65,8 @@ body {
       justify-content: space-between;
     }
   }
-  }
 
-  a {
-  text-decoration: none;
-  color:var(--almost-black);
- 
-}
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
+  
 `;
 
 export default GlobalStyles;

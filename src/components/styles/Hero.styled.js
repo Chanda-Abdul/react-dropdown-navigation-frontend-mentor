@@ -9,7 +9,7 @@ export const StyledHero = styled.section`
   text-align: center;
   margin: 0;
   padding: 0;
-  flex-grow: 1;
+  /* flex-grow: 1; */
 
   .hero-image {
     width: 100vw;
@@ -42,13 +42,13 @@ export const StyledHero = styled.section`
     font-weight: 700;
     font-size: 1em;
     cursor: pointer;
-  }
-
-  button:hover {
-    background-color: transparent;
-    border: 1px solid var(--almost-black);
-    color: var(--medium-gray);
-    transform: scale(0.95) ease-in 2s;
+    transition: all 500ms ease-in-out;
+    &:hover,
+    &:focus {
+      background-color: transparent;
+      border: 1px solid var(--almost-black);
+      color: var(--medium-gray);
+    }
   }
 
   .client-list {
@@ -75,20 +75,19 @@ export const StyledHero = styled.section`
       justify-content: space-between;
       margin: 50px 10vw;
       padding: 10px 0;
-      width: 80vw;
     }
 
     .hero-image {
-      max-width: 40%;
-      aspect-ratio: 4 / 3;
+      max-width: 450px;
+      padding-left: 25px;
     }
     .hero-text {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       align-items: left;
-      max-width: 40%;
-      padding: 100px 20px 20px 50px;
+      padding: 100px auto 20px 50px;
+      max-width: 400px;
     }
 
     h1 {
@@ -107,6 +106,7 @@ export const StyledHero = styled.section`
     .client-list {
       padding: 0;
       padding-top: 25px;
+
       .clients {
         display: flex;
         flex-direction: row;
@@ -114,6 +114,9 @@ export const StyledHero = styled.section`
 
       li {
         padding: 10px;
+      }
+      .client {
+        min-width: 75px;
       }
     }
   }

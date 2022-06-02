@@ -4,6 +4,7 @@ export const StyledDesktopMenu = styled.div`
   display: flex;
   flex-direction: row;
   width: 90vw;
+  transition: all 500ms ease-in-out;
 
   .content {
     display: flex;
@@ -31,11 +32,11 @@ export const StyledDesktopMenu = styled.div`
   }
 
   .level-two {
-
     height: fit-content;
     margin: 5px 20px;
     font-size: 1em;
     line-height: 1.75em;
+
     img {
       padding-right: 15px;
     }
@@ -57,8 +58,7 @@ export const StyledDesktopMenu = styled.div`
       background-color: var(--almost-white);
       color: var(--medium-gray);
       min-height: 200px;
-      box-shadow: 0px 0px 16px 0px var(--medium-gray);
-      transition: 0.5s;
+      box-shadow: 0px 2px 5px 0px var(--medium-gray);
     }
     .company-list {
       display: flex;
@@ -71,24 +71,29 @@ export const StyledDesktopMenu = styled.div`
       border-radius: 10px;
       background-color: var(--almost-white);
       min-height: 150px;
-      box-shadow: 0px 0px 16px 0px var(--medium-gray);
-      transition: 0.5s;
+      box-shadow: 0px 2px 5px 0px var(--medium-gray);
     }
   }
 
   a {
     color: var(--medium-gray);
+    transition: transform 300ms ease-in-out;
+    padding: 5px;
+    &:hover,
+    &:focus {
+      color: var(--cornflower-blue);
+      text-shadow: .1px .1px var(--almost-black);
+    }
   }
 
   .cta {
     margin-left: 40px;
     display: flex;
-
     align-items: center;
 
     button {
       margin: 0 15px;
-      border: 2px solid var(--medium-gray);
+      border: 1px solid var(--medium-gray);
       outline: none;
       background-color: var(--almost-white);
       color: var(--medium-gray);
@@ -99,8 +104,8 @@ export const StyledDesktopMenu = styled.div`
 
     button:hover {
       background-color: transparent;
-      border: 1px solid var(--medium-gray);
-      color: var(--medium-gray);
+      border: 2px solid var(--cornflower-blue);
+      color: var(--cornflower-blue);
       font-weight: 700;
       cursor: pointer;
       transform: scale(0.95);

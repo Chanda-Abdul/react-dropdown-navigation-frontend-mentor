@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { StyledDesktopMenu } from './styles/DesktopMenuBar.styled';
+import {IoIosArrowUp, IoIosArrowDown} from 'react-icons/io'
 
 export default function Menu() {
   const [displayFeatures, setDisplayFeatures] = useState(false);
@@ -9,6 +10,7 @@ export default function Menu() {
     setDisplayFeatures(!displayFeatures);
     setDisplayCompany(false);
   };
+
   const handleDisplayCompany = () => {
     setDisplayCompany(!displayCompany);
     setDisplayFeatures(false);
@@ -27,9 +29,9 @@ export default function Menu() {
               >
                 Features{' '}
                 {!displayFeatures ? (
-                  <img src='./images/icon-arrow-down.svg' alt='down-arrow' />
+                  <IoIosArrowUp alt='expand-menu' /> 
                 ) : (
-                  <img src='./images/icon-arrow-up.svg' alt='up-arrow' />
+                  <IoIosArrowDown  alt='collapse-menu' /> 
                 )}
               </a>
             </li>
@@ -61,9 +63,9 @@ export default function Menu() {
               <a href="/#" className='level-one' onClick={handleDisplayCompany}>
                 Company{' '}
                 {!displayCompany ? (
-                  <img src='./images/icon-arrow-down.svg' alt='down-arrow' />
+                  <IoIosArrowUp alt='expand-menu'/> 
                 ) : (
-                  <img src='./images/icon-arrow-up.svg' alt='up-arrow' />
+                  <IoIosArrowDown  alt='collapse-menu' /> 
                 )}
               </a>
             </li>

@@ -37,7 +37,7 @@ Users should be able to:
 ### Mobile
 <img src="./design/mobile-design.jpg" alt="" width="350"/>
 
-#### Dropdown Menu - Collapsed  Dropdown Menu - Expanded
+#### Dropdown Menu - Collapsed         -------------->     Dropdown Menu - Expanded
 <img src="./design/mobile-menu-collapsed.jpg" alt="" width="350"/> <img src="./design/mobile-menu-expanded.jpg" alt="" width="350"/>
 
 
@@ -57,7 +57,7 @@ Users should be able to:
 
 - Mobile-first workflow
 - [React](https://reactjs.org/) - JavaScript Framework
-- [React Styled Components](https://styled-components.com/) - For <b>CSS</b> Styling
+- [React Styled Components](https://styled-components.com/) - For <b>CSS</b> Styles
 
 
 ### What I learned
@@ -83,14 +83,14 @@ const proudOfThisFunc = () => {
 
 ### Continued development
 
-- animations
-- hero image aspect ratio
+- add slider animation to menu
+- make menu links dynamic, not hard coded
 - `aria` attributes and accessiblility
 
 ### Useful resources
 
-- [Responsive Background Images Using React Hooks🍍](https://itnext.io/responsive-background-images-using-react-hooks-941af365ea1f) => This helped me responsively render images based on the current device breakpoint.
-- [CSS Overlay Techniques](https://tympanus.net/codrops/2013/11/07/css-overlay-techniques/) => to add overlay to all other content while the mobile dropdown menu is open
+- [Responsive Background Images Using React Hooks🍍](https://itnext.io/responsive-background-images-using-react-hooks-941af365ea1f) To responsively render images based on the current device breakpoint.
+- [CSS Overlay Techniques](https://tympanus.net/codrops/2013/11/07/css-overlay-techniques/) To add overlay to all other content while the mobile dropdown menu is open
 
 ## Author
 

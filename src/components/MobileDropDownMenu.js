@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import { StyledMobileMenu } from './styles/MobileDropDownMenu.styled';
+import { IoIosArrowUp, IoIosArrowDown } from 'react-icons/io';
+import { GiHamburgerMenu } from 'react-icons/gi';
+import { GrClose } from 'react-icons/gr';
 
 export default function Menu() {
   const [displayFeatures, setDisplayFeatures] = useState(false);
@@ -25,11 +28,10 @@ export default function Menu() {
       <StyledMobileMenu>
         {!displayMenu && (
           <>
-            <img
-              src='./images/icon-menu.svg'
-              alt='menu'
+            <GiHamburgerMenu
               className='burger-menu'
               onClick={handleToggle}
+              size={24}
             />
           </>
         )}
@@ -41,10 +43,11 @@ export default function Menu() {
               <div className='content'>
                 <ul>
                   <li className='close-menu'>
-                    <img
-                      src='./images/icon-close-menu.svg'
-                      alt='close-menu'
+                    <GrClose
+                      className='close-button'
+                      alt='close-button'
                       onClick={handleToggle}
+                      size={24}
                     />
                   </li>
                   <li>
@@ -55,12 +58,9 @@ export default function Menu() {
                     >
                       Features{' '}
                       {!displayFeatures ? (
-                        <img
-                          src='./images/icon-arrow-down.svg'
-                          alt='down-arrow'
-                        />
+                        <IoIosArrowUp alt='expand-menu' />
                       ) : (
-                        <img src='./images/icon-arrow-up.svg' alt='up-arrow' />
+                        <IoIosArrowDown alt='collapse-menu' />
                       )}
                     </a>
                   </li>
@@ -105,12 +105,9 @@ export default function Menu() {
                     >
                       Company{' '}
                       {!displayCompany ? (
-                        <img
-                          src='./images/icon-arrow-down.svg'
-                          alt='down-arrow'
-                        />
+                        <IoIosArrowUp alt='expand-menu' />
                       ) : (
-                        <img src='./images/icon-arrow-up.svg' alt='up-arrow' />
+                        <IoIosArrowDown alt='collapse-menu'/>
                       )}
                     </a>
                   </li>

@@ -8,21 +8,30 @@ export const StyledMobileMenu = styled.div`
   margin: 0;
   padding: 0;
   font-weight: 400;
+  transition: all 500ms ease-in;
 
-  .burger-menu{
+  .burger-menu {
     max-height: 10vw;
+    transition: color 300ms ease-in;
+    > .dropdown-menu {
+      right: -100%;
+    }
+    &:hover,
+    &:focus {
+      color: var(--cornflower-blue);
+    }
   }
 
   .container::before {
-      content: "";
-      display: block;
-      position: fixed;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
-      z-index: 2;
-      background-color: rgba(0,0,0,0.8);
+    content: '';
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.8);
   }
 
   .dropdown-menu {
@@ -32,22 +41,27 @@ export const StyledMobileMenu = styled.div`
     justify-content: space-between;
     border-radius: 10px;
     margin: 0;
-    padding: 20px 10px 10px 30px;
+    padding: 20px 30px;
     background-color: var(--almost-white);
     color: var(--medium-gray);
-    min-width: 250px;
+    min-width: 50vw;
+    max-width: 75vw;
     height: 100vh;
     z-index: 3;
-    box-shadow: 0px 0px 160px 0px var(--medium-gray);
     top: -25px;
     right: -15px;
-    transition: 0.5s;
-  
+    transition: all 300ms ease-in;
   }
 
-  img,
   a {
     color: var(--medium-gray);
+    transition: color 300ms ease-in-out;
+    padding: 5px;
+    &:hover,
+    &:focus {
+      color: var(--cornflower-blue);
+      text-shadow: .1px .1px var(--almost-black);
+    }
   }
 
   .close-menu {
@@ -56,6 +70,14 @@ export const StyledMobileMenu = styled.div`
     padding: 10px;
     background-color: transparent;
     color: var(--medium-gray);
+  }
+
+  .close-button {
+    transition: color 300ms ease-in-out;
+    &:hover,
+    &:focus {
+      color: var(--cornflower-blue);
+    }
   }
 
   .level-one {
@@ -88,7 +110,7 @@ export const StyledMobileMenu = styled.div`
 
     button {
       margin: 20px 5px 10px 5px;
-      border: 2px solid var(--medium-gray);
+      border: 1px solid var(--medium-gray);
       outline: none;
       background-color: var(--almost-white);
       color: var(--medium-gray);
@@ -100,8 +122,8 @@ export const StyledMobileMenu = styled.div`
 
     button:hover {
       background-color: transparent;
-      border: 1px solid var(--medium-gray);
-      color: var(--medium-gray);
+      border: 2px solid var(--cornflower-blue);
+      color: var(--cornflower-blue);
       font-weight: 700;
       cursor: pointer;
       transform: scale(0.95);
