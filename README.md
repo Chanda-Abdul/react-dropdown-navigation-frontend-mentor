@@ -63,62 +63,67 @@ Users should be able to:
     -  Desktop breakpoint: 900px
 
 ### What I learned
-This dropdown menu project was fun a fun learning experince.  One of my primary considerations while building this project was how to handle the "burger" dropdown menu on mobile viewports, and the "header" menu on desktop viewports.  I decided that the best way for me approach this would be to create two separate components `<MobileDropdownMenu/>` and `<DesktopMenuBar/>` that could be conditionally rendered with a listener and a `useEffect` hook, in the `<Header/>` based on viewport size.
+This dropdown menu project was fun a fun learning experience.  
 
-- `useState` and `useEffect` hooks
-```js
-const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  const [isMobile, setIsMobile] = useState(windowWidth >= 650 ? false : true);
+One of my primary considerations while building this project was to figure out how to handle the "burger" dropdown menu on mobile viewports, and the "header" menu on desktop viewports.  
 
-  useEffect(() => {
-    const handleWindowResize = () => {
-      setWindowWidth(window.innerWidth);
-      setIsMobile(windowWidth >= 900 ? false : true);
-    };
+I decided that the best way for me approach this would be to create two separate components `<MobileDropdownMenu/>` and `<DesktopMenuBar/>` that could be conditionally rendered with a listener and a `useEffect` hook, in the `<Header/>` based on viewport size.
 
-    window.addEventListener('resize', handleWindowResize);
+  - `useState` and `useEffect` hooks
+  ```js
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+    const [isMobile, setIsMobile] = useState(windowWidth >= 650 ? false : true);
 
-    return () => {
-      window.removeEventListener('resize', handleWindowResize);
-    };
-  }, [windowWidth]);
-```
--  conditional render of `<MobileDropdownMenu/>` and `<DesktopMenuBar/>` 
-```js
-  return (
-    <>
-      <StyledHeader>
-        <div className='navigation'>
-          <Logo src='./images/logo.svg' alt='header-logo' />
-          <Nav>{isMobile ? <MobileDropDownMenu /> : <DesktopMenuBar />}</Nav>
-        </div>
-      </StyledHeader>
-    </>
-  );
+    useEffect(() => {
+      const handleWindowResize = () => {
+        setWindowWidth(window.innerWidth);
+        setIsMobile(windowWidth >= 900 ? false : true);
+      };
+
+      window.addEventListener('resize', handleWindowResize);
+
+      return () => {
+        window.removeEventListener('resize', handleWindowResize);
+      };
+    }, [windowWidth]);
   ```
+  -  conditional render of `<MobileDropdownMenu/>` and `<DesktopMenuBar/>` 
+  ```js
+    return (
+      <>
+        <StyledHeader>
+          <div className='navigation'>
+            <Logo src='./images/logo.svg' alt='header-logo' />
+            <Nav>{isMobile ? <MobileDropDownMenu /> : <DesktopMenuBar />}</Nav>
+          </div>
+        </StyledHeader>
+      </>
+    );
+    ```
   - I also learned how to add an overlay to the all elements on the page EXCECT the mobile dropdown menu while the menu is open.  This was a bit tricky, but I've noticed that this is a common frontend pattern and I see it everywhere now.
 
-  ```js
-   .container::before {
-    content: '';
-    display: block;
-    position: fixed;
-    top: 0;
-    right: 0;
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100%;
-    z-index: 2;
-    background-color: rgba(0, 0, 0, 0.75);
-    animation: transitionIn .75s;
-  }
-  ```
+    ```js
+    .container::before {
+      content: '';
+      display: block;
+      position: fixed;
+      top: 0;
+      right: 0;
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      z-index: 2;
+      background-color: rgba(0, 0, 0, 0.75);
+      animation: transitionIn .75s;
+    }
+    ```
 
   - I thought that this project would be a good opportunity to practice my animation skills, to add some polish to my project.  I considered using <b>[React Spring](https://react-spring.dev/)</b>, but I decided to save that for another project and I used <b>CSS Animations</b> instead.
 
 ### Continued development
 - [x] add animations
+- [ ] add pages for menu links
 - [ ] make menu links dynamic, not hard coded
 - [ ] `aria` attributes and accessiblility
 
