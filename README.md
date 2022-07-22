@@ -89,7 +89,7 @@ I decided that the best way for me approach this would be to create two separate
   ```
   -  conditional render of `<MobileDropdownMenu/>` and `<DesktopMenuBar/>` 
 
-    ```js
+```js
     return (
       <>
         <StyledHeader>
@@ -100,11 +100,11 @@ I decided that the best way for me approach this would be to create two separate
         </StyledHeader>
       </>
     );
-    ```
-    
+```
+
   - I also learned how to add an overlay to the all elements on the page EXCECT the mobile dropdown menu while the menu is open.  This was a bit tricky, but I've noticed that this is a common frontend pattern and I see it everywhere now.
 
-    ```js
+```js
     .container::before {
       content: '';
       display: block;
@@ -119,7 +119,7 @@ I decided that the best way for me approach this would be to create two separate
       background-color: rgba(0, 0, 0, 0.75);
       animation: transitionIn .75s;
     }
-    ```
+```
 
   - I thought that this project would be a good opportunity to practice my animation skills, to add some polish to my project.  I considered using <b>[React Spring](https://react-spring.dev/)</b>, but I decided to save that for another project and I used <b>CSS Animations</b> instead.
 
