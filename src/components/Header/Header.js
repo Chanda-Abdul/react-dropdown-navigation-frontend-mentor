@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { StyledHeader, Nav, Logo } from './styles/Header.styled';
-import MobileDropDownMenu from './MobileDropDownMenu';
-import DesktopMenuBar from './DesktopMenuBar';
+import { StyledHeader, Nav, Logo } from './Header.styled';
+import MobileDropDownMenu from '../Menu/Mobile/MobileDropDownMenu';
+import DesktopMenuBar from '../Menu/Desktop/DesktopMenuBar';
 
 export default function Header() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -10,7 +10,7 @@ export default function Header() {
   useEffect(() => {
     const handleWindowResize = () => {
       setWindowWidth(window.innerWidth);
-      setIsMobile(windowWidth >= 650 ? false : true);
+      setIsMobile(windowWidth >= 900 ? false : true);
     };
 
     window.addEventListener('resize', handleWindowResize);

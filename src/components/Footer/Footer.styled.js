@@ -5,7 +5,7 @@ export const StyledFooter = styled.footer`
   flex-direction: column;
   width: 100vw;
   align-items: center;
-  margin: 50px auto 0 auto;
+  margin: 50px auto 10px auto;
 
   .attribution {
     position: static;
@@ -17,10 +17,9 @@ export const StyledFooter = styled.footer`
     line-height: 0.25em;
 
     a {
-      color: var(--cornflower-blue);
+      color: var(--medium-yellow);
       padding: 0 0 0 5px;
-      text-shadow: .1px .1px var(--almost-black);
-
+      text-shadow: 0.2px 0.2px var(--medium-gray);
     }
   }
 `;

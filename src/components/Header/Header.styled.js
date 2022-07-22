@@ -1,13 +1,15 @@
 import styled from 'styled-components';
 
 export const StyledHeader = styled.div`
-
+ animation: transitionIn 1.75s;
+ 
   .navigation {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     padding: 10px 20px;
+    width: 90vw;
   }
 `;
 

@@ -1,13 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;700&display=swap');
 
 :root {
-  --almost-white: hsl(0, 0%, 98%);
-  --medium-gray: hsl(0, 0%, 41%);
-  --almost-black: hsl(0, 0%, 8%);
-  --cornflower-blue: hsl(243, 79%, 68%);
+  --almost-white: #FAFAFA;
+  --medium-gray:  #686868;
+  --light-gray: #ADADAD;
+  --almost-black: #151515;
+  --cornflower-blue: #726CEE;
+  --aqua-blue: #4BB1DA;
+  --medium-yellow:#EDD556;
+  --bright-purple:#8E4CB6;
 }
 
 * {
-  box-sizing: border-box;
   margin: 0;
+  font-family: 'Epilogue', sans-serif;
+}
+
+.cta{
+/* styleName: Body S */
+font-size: 14px;
+font-weight: 500;
+line-height: 16px;
+letter-spacing: 0px;
+text-align: left;
 }

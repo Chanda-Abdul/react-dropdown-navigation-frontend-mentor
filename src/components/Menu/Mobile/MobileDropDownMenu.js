@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import { StyledMobileMenu } from './styles/MobileDropDownMenu.styled';
+import { StyledMobileMenu } from './MobileDropDownMenu.styled';
 import { IoIosArrowUp, IoIosArrowDown } from 'react-icons/io';
-import { GiHamburgerMenu } from 'react-icons/gi';
-import { GrClose } from 'react-icons/gr';
+import { VscMenu, VscChromeClose } from 'react-icons/vsc';
 
 export default function Menu() {
   const [displayFeatures, setDisplayFeatures] = useState(false);
@@ -28,10 +27,10 @@ export default function Menu() {
       <StyledMobileMenu>
         {!displayMenu && (
           <>
-            <GiHamburgerMenu
+            <VscMenu
               className='burger-menu'
               onClick={handleToggle}
-              size={24}
+              size={36}
             />
           </>
         )}
@@ -43,12 +42,15 @@ export default function Menu() {
               <div className='content'>
                 <ul>
                   <li className='close-menu'>
-                    <GrClose
-                      className='close-button'
-                      alt='close-button'
-                      onClick={handleToggle}
-                      size={24}
-                    />
+                    <a href='#'>
+                      <VscChromeClose
+                        className='close-button'
+                        alt='close-button'
+                        onClick={handleToggle}
+                        size={30}
+                  
+                      />
+                    </a>
                   </li>
                   <li>
                     <a
@@ -58,9 +60,9 @@ export default function Menu() {
                     >
                       Features{' '}
                       {!displayFeatures ? (
-                        <IoIosArrowUp alt='expand-menu' />
-                      ) : (
                         <IoIosArrowDown alt='collapse-menu' />
+                      ) : (
+                        <IoIosArrowUp alt='expand-menu' />
                       )}
                     </a>
                   </li>
@@ -105,9 +107,9 @@ export default function Menu() {
                     >
                       Company{' '}
                       {!displayCompany ? (
-                        <IoIosArrowUp alt='expand-menu' />
+                        <IoIosArrowDown alt='collapse-menu' />
                       ) : (
-                        <IoIosArrowDown alt='collapse-menu'/>
+                        <IoIosArrowUp alt='expand-menu' />
                       )}
                     </a>
                   </li>

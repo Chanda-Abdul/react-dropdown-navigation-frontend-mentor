@@ -37,7 +37,7 @@ Users should be able to:
 ### Mobile
 <img src="./design/mobile-design.jpg" alt="" width="350"/>
 
-#### Dropdown Menu - Collapsed         -------------->     Dropdown Menu - Expanded
+#### Dropdown Menu - Collapsed ➡️ Dropdown Menu - Expanded
 <img src="./design/mobile-menu-collapsed.jpg" alt="" width="350"/> <img src="./design/mobile-menu-expanded.jpg" alt="" width="350"/>
 
 
@@ -47,45 +47,80 @@ Users should be able to:
 
 ## Links
 
-<!-- - Solution URL: [Add solution URL here](https://your-solution-url.com) -->
-- Live Site URL: [live site](https://darling-boba-0cc95f.netlify.app/)
+- Solution Live Site URL: [live site](https://darling-boba-0cc95f.netlify.app/)
 
 ## My process
 
 ### Built with
 
-
-- Mobile-first workflow
 - [React](https://reactjs.org/) - JavaScript Framework
-- [React Styled Components](https://styled-components.com/) - For <b>CSS</b> Styles
-
+  - React Hooks
+- [React Styled Components](https://styled-components.com/) 
+  - For <b>CSS</b> Styles
+  - Mobile-first workflow
+    -  Mobile breakpoint: 375px
+    -  Tablet beakpoint: 600px
+    -  Desktop breakpoint: 900px
 
 ### What I learned
-<!-- 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+This dropdown menu project was fun a fun learning experince.  One of my primary considerations while building this project was how to handle the "burger" dropdown menu on mobile viewports, and the "header" menu on desktop viewports.  I decided that the best way for me approach this would be to create two separate components `<MobileDropdownMenu/>` and `<DesktopMenuBar/>` that could be conditionally rendered with a listener and a `useEffect` hook, in the `<Header/>` based on viewport size.
 
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
+- `useState` and `useEffect` hooks
 ```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
-``` -->
+const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [isMobile, setIsMobile] = useState(windowWidth >= 650 ? false : true);
 
+  useEffect(() => {
+    const handleWindowResize = () => {
+      setWindowWidth(window.innerWidth);
+      setIsMobile(windowWidth >= 900 ? false : true);
+    };
+
+    window.addEventListener('resize', handleWindowResize);
+
+    return () => {
+      window.removeEventListener('resize', handleWindowResize);
+    };
+  }, [windowWidth]);
+```
+-  conditional render of `<MobileDropdownMenu/>` and `<DesktopMenuBar/>` 
+```js
+  return (
+    <>
+      <StyledHeader>
+        <div className='navigation'>
+          <Logo src='./images/logo.svg' alt='header-logo' />
+          <Nav>{isMobile ? <MobileDropDownMenu /> : <DesktopMenuBar />}</Nav>
+        </div>
+      </StyledHeader>
+    </>
+  );
+  ```
+  - I also learned how to add an overlay to the all elements on the page EXCECT the mobile dropdown menu while the menu is open.  This was a bit tricky, but I've noticed that this is a common frontend pattern and I see it everywhere now.
+
+  ```js
+   .container::before {
+    content: '';
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.75);
+    animation: transitionIn .75s;
+  }
+  ```
+
+  - I thought that this project would be a good opportunity to practice my animation skills, to add some polish to my project.  I considered using <b>[React Spring](https://react-spring.dev/)</b>, but I decided to save that for another project and I used <b>CSS Animations</b> instead.
 
 ### Continued development
-
-- add slider animation to menu
-- make menu links dynamic, not hard coded
-- `aria` attributes and accessiblility
+- [x] add animations
+- [ ] make menu links dynamic, not hard coded
+- [ ] `aria` attributes and accessiblility
 
 ### Useful resources
 
