@@ -88,7 +88,8 @@ I decided that the best way for me approach this would be to create two separate
     }, [windowWidth]);
   ```
   -  conditional render of `<MobileDropdownMenu/>` and `<DesktopMenuBar/>` 
-  ```js
+
+    ```js
     return (
       <>
         <StyledHeader>
@@ -100,6 +101,7 @@ I decided that the best way for me approach this would be to create two separate
       </>
     );
     ```
+    
   - I also learned how to add an overlay to the all elements on the page EXCECT the mobile dropdown menu while the menu is open.  This was a bit tricky, but I've noticed that this is a common frontend pattern and I see it everywhere now.
 
     ```js
