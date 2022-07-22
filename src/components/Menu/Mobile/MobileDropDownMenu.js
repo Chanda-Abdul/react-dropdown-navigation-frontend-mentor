@@ -41,16 +41,14 @@ export default function Menu() {
             <div className='dropdown-menu'>
               <div className='content'>
                 <ul>
-                  <li className='close-menu'>
-                    <a href='#'>
+                  <li className='close-menu'>                   
                       <VscChromeClose
                         className='close-button'
                         alt='close-button'
                         onClick={handleToggle}
                         size={30}
-                  
+              
                       />
-                    </a>
                   </li>
                   <li>
                     <a
